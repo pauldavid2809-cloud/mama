@@ -103,55 +103,55 @@ export const giftContent: GiftConfig = {
       id: "intro-scene",
       durationInFrames: 110, // ~3.6 segundos
       badge: "PRÓLOGO DE GRATITUD",
-      title: "Hay personas que iluminan el mundo...",
-      verse: "Pero tú, mamá, no solo lo iluminas: tú haces que la vida sea un lugar seguro, tibio y lleno de amor sincero.",
-      image: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1080&auto=format&fit=crop",
-      subtext: "Hoy celebramos tu hermosa existencia"
+      title: "Para la reina de mi vida...",
+      verse: "Hay personas que iluminan el mundo, pero tú, Ma, haces que la vida sea un lugar seguro, tibio y lleno de amor.",
+      image: "/photos/foto2_cindy.jpg",
+      subtext: "Hoy celebramos tu hermosa existencia, Cindy"
     },
     {
       id: "roots-scene",
       durationInFrames: 130, // ~4.3 segundos
       badge: "CAPÍTULO I • TUS CUIDADOS",
-      title: "La ternura de tus brazos",
-      verse: "Desde mis primeros pasos hasta mis mayores caídas, tu mano siempre estuvo ahí, sosteniéndome en silencio y con la fe más inquebrantable.",
-      image: "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1080&auto=format&fit=crop",
-      subtext: "Gracias por ser mi primer y más puro refugio"
+      title: "Tus brazos, mi primer refugio",
+      verse: "Crecí sintiendo que nada malo podía pasarme porque tú estabas ahí. Aunque hoy esté grande y a veces sea el más peleón, para mí siempre serás mi lugar seguro.",
+      image: "/photos/foto1_infancia.jpg",
+      subtext: "Gracias por sostenerme desde niño, Ma"
     },
     {
       id: "strength-scene",
       durationInFrames: 130, // ~4.3 segundos
-      badge: "CAPÍTULO II • TU VALENTÍA",
-      title: "La fuerza detrás de tu sonrisa",
-      verse: "Te he visto transformar días difíciles en caricias y cansancio en abrazos. Tu fortaleza es el faro que guía mis pasos en cada tormenta.",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1080&auto=format&fit=crop",
-      subtext: "Mi mayor ejemplo de coraje y perseverancia"
+      badge: "CAPÍTULO II • TU LUZ Y FUERZA",
+      title: "La mujer más valiente y hermosa",
+      verse: "Miren esa sonrisa y esos ojos tan llenos de vida. Admiro tu fortaleza, tu temple y cómo transformas cualquier cansancio en amor para nosotros.",
+      image: "/photos/foto2_cindy.jpg",
+      subtext: "Orgulloso de la madre que Dios me dio"
     },
     {
       id: "smiles-scene",
       durationInFrames: 130, // ~4.3 segundos
-      badge: "CAPÍTULO III • NUESTRA COMPLICIDAD",
-      title: "Tus risas que sanan el alma",
-      verse: "No hay nada más reconfortante que escuchar tu risa. Esos momentos sencillos, las charlas cotidianas y tu café compartido son mi verdadera riqueza.",
-      image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=1080&auto=format&fit=crop",
-      subtext: "Cada segundo a tu lado vale una vida entera"
+      badge: "CAPÍTULO III • COMPLICIDAD",
+      title: "Juntos en cada paso del camino",
+      verse: "Compartir contigo, verte reír y saber que estamos juntos en las buenas y en las malas no tiene precio. Cada momento a tu lado vale oro.",
+      image: "/photos/foto3_complicidad.jpg",
+      subtext: "Mi compañera incondicional de vida"
     },
     {
       id: "gratitude-scene",
       durationInFrames: 140, // ~4.6 segundos
-      badge: "CAPÍTULO IV • AMOR INCONDICIONAL",
-      title: "El milagro de tenerte como madre",
-      verse: "Si volviera a nacer mil veces, en las mil pediría ser tu hijo. Gracias por amarme tal como soy y por enseñarme el verdadero valor de la bondad.",
-      image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=1080&auto=format&fit=crop",
-      subtext: "Mi corazón siempre será tu hogar"
+      badge: "CAPÍTULO IV • NUESTRO HOGAR",
+      title: "El corazón de nuestra familia",
+      verse: "Tú eres la que nos mantiene unidos, la alegría que llena cualquier mesa y la bendición más grande de nuestra casa.",
+      image: "/photos/foto4_familia.jpg",
+      subtext: "Tu felicidad es la de todos nosotros"
     },
     {
       id: "celebration-scene",
       durationInFrames: 150, // ~5 segundos
-      badge: "¡GRACIAS POR EXISTIR!",
+      badge: "¡A CELEBRAR TU VIDA! 🪗",
       title: "¡Feliz Cumpleaños, Ma!",
-      verse: "Que este nuevo año de vida te devuelva multiplicado cada rayo de amor, paz y salud que le has regalado a todos los que te rodean.",
-      image: "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1080&auto=format&fit=crop",
-      subtext: "Te amo con todas las fuerzas de mi ser ❤️"
+      verse: "¡Que Dios te bendiga hoy, mañana y siempre! Que este nuevo año te colme de salud de roble, paz infinita y mil motivos para sonreír.",
+      image: "/photos/foto2_cindy.jpg",
+      subtext: "Te amo con todas las fuerzas de mi alma ❤️"
     }
   ],
 
@@ -160,51 +160,51 @@ export const giftContent: GiftConfig = {
     title: "Una Carta Para Mi Reina Cindy",
     openingGreeting: "Mi querida Ma,",
     bodyParagraphs: [
-      "Hoy que cumples un año más de vida, me detengo a pensar en todo lo que has hecho por mí, y las palabras se quedan cortas. A veces en el ajetreo de los días olvidamos decir lo más importante: que no pasa un solo día en que no me sienta orgulloso y afortunado de que tú seas mi madre.",
-      "Gracias por cada sacrificio que hiciste en silencio, por levantarte temprano para velar por mí, por tus palabras de aliento cuando sentí que no podía más, y por ese abrazo que cura cualquier dolor del mundo exterior.",
-      "Eres una mujer admirable: dulce, sabia, incansable y con un corazón tan grande que no te cabe en el pecho. Todo lo bueno que hay en mí lleva tu huella y tus enseñanzas.",
-      "En este nuevo año de vida, te deseo paz en tu mente, alegría desbordante en tu mirada y salud infinita. Mereces ser inmensamente feliz todos los días de tu existencia."
+      "Hoy que cumples un año más de vida, quiero escribirte estas líneas desde el fondo de mi corazón. A veces en el día a día se me olvida decirte lo más importante: que no pasa una sola mañana en que no le agradezca a Dios por tenerte como madre.",
+      "Gracias por cada sacrificio que hiciste en silencio, por cuidarme con tanta paciencia desde que era ese niño que no te soltaba en las fotos, por tus palabras cuando me siento perdido y por ese abrazo tuyo que tiene el poder de calmar cualquier tormenta.",
+      "Sé que a veces puedo ser tu hijo 'el más peleón', que tenemos nuestros momentos y que no siempre es fácil conmigo, pero quiero que tengas la certeza absoluta de que te adoro con mi vida entera y que todo lo que soy y lucho cada día lleva tu ejemplo y tu amor.",
+      "Mírate en tus fotos: eres una mujer radiante, hermosa, trabajadora y el verdadero pilar que nos une a todos en la mesa. En este nuevo año de vida, solo te deseo salud infinita, tranquilidad en tu alma y muchas alegrías."
     ],
-    closingPhrase: "Gracias por existir y por ser mi bendición más grande.",
+    closingPhrase: "Gracias por ser mi mamá, mi orgullo y mi mayor bendición.",
     signature: "Con todo mi amor infinito,",
-    postScriptum: "P.D.: Mira más abajo, dejé unas fotos especiales con recuerdos secretos para ti..."
+    postScriptum: "P.D.: Mira más abajo, dejé nuestras fotos con anécdotas y recuerdos secretos para ti..."
   },
 
   memoriesGallery: [
     {
       id: "polaroid-1",
-      image: "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=600&auto=format&fit=crop",
-      caption: "Tus Abrazos Mágicos",
-      backStory: "Sin importar los años que pasen, el mejor lugar del mundo siempre será entre tus brazos. Gracias por protegerme siempre.",
+      image: "/photos/foto1_infancia.jpg",
+      caption: "Donde Todo Empezó",
+      backStory: "¿Te acuerdas de cuando me cargabas así? Crecí rápido, pero en mi corazón sigo siendo ese niño que siempre busca tu bendición y tu abrazo protector.",
       dateOrPlace: "Recuerdo Inolvidable"
     },
     {
       id: "polaroid-2",
-      image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=600&auto=format&fit=crop",
-      caption: "Tus Risas Compartidas",
-      backStory: "Verte sonreír alegra cualquier día gris. Prometo seguir buscando mil motivos para verte reír así toda la vida.",
-      dateOrPlace: "Días Felices"
+      image: "/photos/foto2_cindy.jpg",
+      caption: "Mi Ma Preciosa",
+      backStory: "¡Miren qué hermosa estás aquí! Nunca pierdas esa chispa y esa sonrisa tan tuya que alegra a todos los que tenemos la dicha de estar a tu lado.",
+      dateOrPlace: "Esa Sonrisa Que Ilumina"
     },
     {
       id: "polaroid-3",
-      image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=600&auto=format&fit=crop",
-      caption: "Siempre Juntos",
-      backStory: "En las buenas y en las malas, tu compañía me da la seguridad para seguir adelante. Eres mi mayor tesoro.",
-      dateOrPlace: "De la Mano"
+      image: "/photos/foto3_complicidad.jpg",
+      caption: "Juntos en el Camino",
+      backStory: "Aunque sea tu hijo 'el más peleón', sabes que por ti doy la cara y la vida entera. Compartir un rato contigo siempre me llena el alma.",
+      dateOrPlace: "Complicidad Pura"
     },
     {
       id: "polaroid-4",
-      image: "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=600&auto=format&fit=crop",
-      caption: "¡A Celebrarte Hoy y Siempre!",
-      backStory: "Hoy no solo festejamos tus años, festejamos la dicha de tenerte. ¡Que se cumplan todos tus anhelos!",
-      dateOrPlace: "Tu Día Especial"
+      image: "/photos/foto4_familia.jpg",
+      caption: "La Familia Que Creaste",
+      backStory: "Verte rodeada de todos nosotros, comiendo y compartiendo risas, es mi mayor satisfacción. Eres el corazón y el pegamento de este hogar.",
+      dateOrPlace: "Unidos Por Tu Amor"
     }
   ],
 
   wishSection: {
     title: "Pide un Deseo de Cumpleaños 🕯️",
     instructions: "Cierra los ojos, piensa en lo que más anhela tu corazón en este nuevo año... y toca la velita para encender tus bendiciones.",
-    blownMessage: "¡Tu deseo ya está en camino al universo! ✨ Que Dios y la vida te colmen de salud, abundancia y sonrisas.",
-    finalHeartNote: "Te amo infinitamente, Mamá ❤️"
+    blownMessage: "¡Tu deseo ya está en camino al cielo! ✨ Que Dios te colme de bendiciones, salud y prosperidad.",
+    finalHeartNote: "¡Te amo infinitamente, Cindy! ❤️"
   }
 };
