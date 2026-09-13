@@ -29,10 +29,13 @@ export interface GiftConfig {
   momName: string;          // El nombre de tu mamá o cómo le dices con cariño
   senderName: string;       // Tu nombre o firma
   birthdayDate: string;     // Fecha para mostrar (ej: "13 de Septiembre")
+  whatsappNumber?: string;  // Tu número de WhatsApp con código de país (ej: "+584121234567")
   
   // Música de fondo
   music: {
-    audioUrl: string;       // Ruta a archivo MP3 en public/ o enlace web
+    youtubeVideoId?: string;// ID de YouTube (ej: "n9KdeA9KMGg")
+    audioUrl: string;       // Ruta a archivo MP3 en public/ (ej: "/musica.mp3")
+    fallbackUrl?: string;   // Melodía de respaldo si el archivo local aún no se ha copiado
     songTitle: string;
     artist: string;
   };
@@ -74,16 +77,17 @@ export interface GiftConfig {
 }
 
 export const giftContent: GiftConfig = {
-  momName: "Mamá",
-  senderName: "Tu hijo que te ama con el alma",
+  momName: "Ma",
+  senderName: "Tu hijo, Paul, el más peleón",
   birthdayDate: "Hoy en tu día especial",
+  whatsappNumber: "584120308674",
 
   music: {
-    // Pista de piano suave y emotiva (Royalty free / CC).
-    // Puedes colocar tu propio archivo MP3 en la carpeta public/ (ej: "/mi-cancion.mp3")
-    audioUrl: "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=piano-moment-9835.mp3",
-    songTitle: "Melodía de Amor Infinito",
-    artist: "Dedicado a Ti"
+    youtubeVideoId: "n9KdeA9KMGg", // Diomedes Díaz - Tu Cumpleaños
+    audioUrl: "/musica.mp3",
+    fallbackUrl: "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=piano-moment-9835.mp3",
+    songTitle: "Tu Cumpleaños 🪗",
+    artist: "Diomedes Díaz"
   },
 
   welcomeScreen: {
@@ -144,7 +148,7 @@ export const giftContent: GiftConfig = {
       id: "celebration-scene",
       durationInFrames: 150, // ~5 segundos
       badge: "¡GRACIAS POR EXISTIR!",
-      title: "¡Feliz Cumpleaños, Mamita!",
+      title: "¡Feliz Cumpleaños, Ma!",
       verse: "Que este nuevo año de vida te devuelva multiplicado cada rayo de amor, paz y salud que le has regalado a todos los que te rodean.",
       image: "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1080&auto=format&fit=crop",
       subtext: "Te amo con todas las fuerzas de mi ser ❤️"
@@ -153,8 +157,8 @@ export const giftContent: GiftConfig = {
 
   letter: {
     envelopeHint: "Hay una carta sellada para ti... Toca el sobre dorado para desdoblarla 💌",
-    title: "Una Carta Para Mi Reina",
-    openingGreeting: "Mi querida y amada Mamá,",
+    title: "Una Carta Para Mi Reina Cindy",
+    openingGreeting: "Mi querida Ma,",
     bodyParagraphs: [
       "Hoy que cumples un año más de vida, me detengo a pensar en todo lo que has hecho por mí, y las palabras se quedan cortas. A veces en el ajetreo de los días olvidamos decir lo más importante: que no pasa un solo día en que no me sienta orgulloso y afortunado de que tú seas mi madre.",
       "Gracias por cada sacrificio que hiciste en silencio, por levantarte temprano para velar por mí, por tus palabras de aliento cuando sentí que no podía más, y por ese abrazo que cura cualquier dolor del mundo exterior.",

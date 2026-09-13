@@ -8,49 +8,89 @@ interface Props {
 
 export const AudioController: React.FC<Props> = ({ shouldPlay }) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const ytIframeRef = useRef<HTMLIFrameElement | null>(null);
+  const [audioSrc, setAudioSrc] = useState(giftContent.music.audioUrl);
   const [isPlaying, setIsPlaying] = useState(false);
   const { music } = giftContent;
 
-  useEffect(() => {
-    if (!audioRef.current) return;
+  const handleAudioError = () => {
+    if (music.fallbackUrl && audioSrc !== music.fallbackUrl) {
+      setAudioSrc(music.fallbackUrl);
+    }
+  };
 
-    if (shouldPlay) {
+  useEffect(() => {
+    if (!shouldPlay) return;
+
+    // 1. Si hay video de YouTube configurado, enviar comando para reproducir
+    if (music.youtubeVideoId && ytIframeRef.current?.contentWindow) {
+      try {
+        ytIframeRef.current.contentWindow.postMessage(
+          JSON.stringify({ event: 'command', func: 'playVideo', args: [] }),
+          '*'
+        );
+        setIsPlaying(true);
+      } catch (e) {
+        console.log('Error enviando comando a YouTube:', e);
+      }
+    }
+
+    // 2. Si no hay YouTube o como apoyo directo
+    if (!music.youtubeVideoId && audioRef.current) {
       audioRef.current.volume = 0.6;
       audioRef.current
         .play()
-        .then(() => {
-          setIsPlaying(true);
-        })
-        .catch((err) => {
-          console.log('Audio autoplay prevented, user can tap to play:', err);
-          setIsPlaying(false);
-        });
+        .then(() => setIsPlaying(true))
+        .catch(() => setIsPlaying(false));
     }
-  }, [shouldPlay]);
+  }, [shouldPlay, music.youtubeVideoId]);
 
   const togglePlay = () => {
-    if (!audioRef.current) return;
+    if (music.youtubeVideoId && ytIframeRef.current?.contentWindow) {
+      const command = isPlaying ? 'pauseVideo' : 'playVideo';
+      ytIframeRef.current.contentWindow.postMessage(
+        JSON.stringify({ event: 'command', func: command, args: [] }),
+        '*'
+      );
+      setIsPlaying(!isPlaying);
+      return;
+    }
 
-    if (isPlaying) {
-      audioRef.current.pause();
-      setIsPlaying(false);
-    } else {
-      audioRef.current.play().then(() => {
-        setIsPlaying(true);
-      });
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+        setIsPlaying(false);
+      } else {
+        audioRef.current.play().then(() => setIsPlaying(true));
+      }
     }
   };
 
   return (
     <>
-      <audio
-        ref={audioRef}
-        src={music.audioUrl}
-        loop
-        preload="auto"
-      />
+      {/* Reproductor de YouTube de fondo con audio directo */}
+      {music.youtubeVideoId && (
+        <iframe
+          ref={ytIframeRef}
+          className="fixed -top-[9999px] -left-[9999px] w-1 h-1 opacity-0 pointer-events-none"
+          src={`https://www.youtube.com/embed/${music.youtubeVideoId}?enablejsapi=1&autoplay=0&loop=1&playlist=${music.youtubeVideoId}&playsinline=1&controls=0`}
+          allow="autoplay; encrypted-media"
+          title="Fondo Musical YouTube"
+        />
+      )}
 
-      {/* Control flotante en la esquina superior */}
+      {/* Audio nativo como respaldo */}
+      {!music.youtubeVideoId && (
+        <audio
+          ref={audioRef}
+          src={audioSrc}
+          onError={handleAudioError}
+          loop
+          preload="auto"
+        />
+      )}
+
+      {/* Botón de control flotante en la esquina superior derecha */}
       <div className="fixed top-4 right-4 z-40">
         <button
           onClick={togglePlay}
@@ -66,7 +106,7 @@ export const AudioController: React.FC<Props> = ({ shouldPlay }) => {
             />
           </div>
 
-          <span className="hidden sm:inline font-sans text-[11px] text-stone-300 max-w-[110px] truncate">
+          <span className="hidden sm:inline font-sans text-[11px] text-stone-300 max-w-[120px] truncate">
             {music.songTitle}
           </span>
 

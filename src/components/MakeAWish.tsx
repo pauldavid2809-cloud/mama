@@ -52,10 +52,12 @@ export const MakeAWish: React.FC = () => {
   };
 
   const shareWhatsApp = () => {
+    const rawNumber = giftContent.whatsappNumber ? giftContent.whatsappNumber.replace(/[^0-9]/g, '') : '';
     const text = encodeURIComponent(
-      `¡Hola mi amor! Acabo de ver el hermoso regalo que me hiciste para mi cumpleaños. ¡Me emocionó hasta el alma! Te amo muchísimo ❤️`
+      `¡Hola mi amor! Acabo de ver el hermoso regalo que me hiciste para mi cumpleaños. ¡Me emocionó hasta el alma! Te amo muchísimo, hijo mío ❤️`
     );
-    window.open(`https://wa.me/?text=${text}`, '_blank');
+    const url = rawNumber ? `https://wa.me/${rawNumber}?text=${text}` : `https://wa.me/?text=${text}`;
+    window.open(url, '_blank');
   };
 
   return (
